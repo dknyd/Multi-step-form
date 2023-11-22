@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body>
+<main>
+  <!-- SIDEBAR -->
+  <section class="container__sidebar">
+      <div class="step step__1">
+        <div class="step_num step_num1 step__current">1</div>
+        <div class="step__container">
+        <span class="step__number step__number1">STEP 1</span> 
+        <span class="step__name step__name1">YOUR INFO</span>
+      </div>
+      </div>
+      <div class="step step__2">
+        <div class="step_num step_num2">2</div>
+        <div class="step__container">
+        <span class="step__number step__number2">STEP 2</span> 
+        <span class="step__name step__name2">SELECT PLANS</span>
+      </div>
+      </div>
+      <div class="step step__3">
+        <div class="step_num step_num3">3</div>
+        <div class="step__container">
+        <span class="step__number step__number3">STEP 3</span> 
+        <span class="step__name step__name3">ADD-ONS</span>
+      </div>
+      </div>
+      <div class="step step__4">
+        <div class="step_num step_num4">4</div>
+        <div class="step__container">
+        <span class="step__number step__number4">STEP 4</span> 
+        <span class="step__name step__name4">SUMMARY</span>
+      </div>
+      </div>    
+  </section>
+
+  <section class="container__steps">
+  <!-- STEP 1 -->
+    <div class="container__step container__step1 ">
+      <h1 class="step__top personal__info">Personal info</h1>
+     <span class="step__description sttep__description__personal">Please provide your name, email address, and phone number.</span>  
+
+      <span class="text text__name">Name</span>
+      <input class="input__name" type="text" name="input__name" id="input__name" placeholder="e.g Stephen King" required>
+  
+      <span class="text text__email"> Email Address</span>
+      <input class="input__email" type="email" name="input__email" id="input__email" placeholder="e.g. stephenking@lorem.com" required>
+  
+      <span class="text text__phone"> Phone Number</span>
+      <input class="input__phone" type="tel" name="input__phone" id="input__phone" placeholder="e.g. +1 234 567 890" required>
+      <div class="container__nextStep container__nextStep__step1">
+        <button class="button__nextStep button__nextStep__step1">Next Step</button>
+      </div>  
+    </div>
+  <!-- STEP 2-->
+  <div class="container__step container__step2 hidden">
+    <h1 class="step__top personal__info"> Select your plan</h1>
+    <span class="step__description sttep__description__personal">You have the option of monthly or yearly billing.</span>  
+    <div class="container__planOptions">
+      <!-- ARCADE -->
+        <div class="planOption planOption__arcade selected">      
+          <img class="iconOption iconOption__arcade" src="assets/images/icon-arcade.svg" alt="iconArcade">
+          <div class="optionType optionType__arcade">Arcade</div>
+          <div class="optionPrice optionPrice__arcade">$9/mo</div>
+      </div>
+      <!-- ADVANCED -->
+      <div class="planOption planOption__advanced">      
+        <img class="iconOption iconOption__advanced" src="assets/images/icon-advanced.svg" alt="iconAdvanced">
+        <div class="optionType optionType__advanced">Advanced</div>
+        <div class="optionPrice optionPrice__advanced">$12/mo</div>
+      </div>
+      <!-- PRO -->
+      <div class="planOption planOption__pro">      
+        <img class="iconOption iconOption__pro" src="assets/images/icon-pro.svg" alt="iconpro">
+        <div class="optionType optionType__pro">Pro</div>
+        <div class="optionPrice optionPrice__pro">$15/mo</div>
+      </div>
+    </div>
+    
+<!-- Rounded switch -->
+  <div class="container__switch" >
+    <div class="Monthly">Monthly</div>
+    
+    <div class="wrap__switch">
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+  </div>
+  <div class="Yearly">Yearly</div>
+  </div>
+  <!-- Buttons -->
+  <div class="container__buttons">
+    <div class="container__goBack">
+      <button class="button__goBack">Go Back</button>
+    </div> 
+  <div class="container__nextStep">
+    <button class="button__nextStep button__nextStep__step2">Next Step</button>
+  </div> 
+</div>
+  </div>
+  <!-- STEP 3 -->
+  <div class="container__step container__step3 hidden">
+    <h1 class="step__top personal__info">Pick add-ons</h1>
+    <span class="step__description sttep__description__personal"> Add-ons help enhance your gaming experience.</span> 
+  
+    <!-- Addon1 -->
+  <div class="container__addon">
+    <input type="checkbox" class="checkbox">
+    <div class="addon__name">Online service</div>
+    <div class="addon__desc">Access to multiplayer games</div>
+    <div class="addon__price online__service">+$1/mo</div>
+  </div>
+     <!-- Addon2 -->  
+  <div class="container__addon">
+    <input type="checkbox" class="checkbox">
+    <div class="addon__name">Larger storage</div>
+    <div class="addon__desc">Extra 1TB of cloud save</div>
+    <div class="addon__price larger__storage">+$2/mo</div>
+  </div>
+   <!-- Addon3 -->
+  <div class="container__addon">
+    <input type="checkbox" class="checkbox">
+    <div class="addon__name">Customizable Profile</div>
+    <div class="addon__desc">Custom theme on your profile</div>
+    <div class="addon__price customizable__profile">+$2/mo</div>  
+  </div>
+
+  <!-- Buttons -->
+  <div class="container__buttons container__buttons__step3">
+    <div class="container__goBack">
+      <button class="button__goBack">Go Back</button>
+    </div> 
+  <div class="container__nextStep">
+    <button class="button__nextStep button__nextStep__step3">Next Step</button>
+  </div> 
+</div>
+</div>
+<!-- STEP 4 -->
+<div class="container__step container__step4 hidden">
+  <h1 class="step__top personal__info">Finishing up</h1>
+  <span class="step__description sttep__description__personal">Double-check everything looks OK before confirming.</span> 
+
+  <!-- Dynamically add subscription and add-on selections here -->
+  <div class="final__subscription__container">
+    <div class="final__subscription__name__container">
+      <span class="final__subscription__name">Arcade</span>
+      <span class="final__subscription__name__MY">(Monthly)</span>
+    </div>
+    <div class="final__subscription__price">$90/yrS</div>
+    <button class="button__change">Change</button>
+  </div>
+  <hr></hr>
+  <div class="final__addons__container">
+
+  </div>
+  <div class="total__price__container">
+    <div class="total_price__MY"> Total (per <span class="option__MY"> year)</span> </div>
+    <div class="total__price"></div>
+  </div>
+ 
+  <div class="container__buttons container__buttons__step4">
+    <div class="container__goBack">
+      <button class="button__goBack button__goBack___step4">Go Back</button>
+    </div> 
+  <div class="container__nextStep">
+    <button class="button__nextStep button__confirm">Confirm</button>
+  </div> 
+</div>
+  </div>
+
+<!-- STEP 5 -->
+  <div class="container__step container__step5 hidden">
+<img src="assets/images/icon-thank-you.svg" alt="iconThankYou" class="iconThankYou">
+
+    <div class="textThankYou">Thank you!</div> 
+    <div class="detailThankYou">
+    Thanks for confirming your subscription! We hope you have fun 
+    using our platform. If you ever need support, please feel free 
+    to email us at support@loremgaming.com.
+  </div>
+  
+  </div>
+  </section>
+  
+</main>
+<script src="script.js"></script>
+</body>
+</html>
